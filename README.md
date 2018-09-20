@@ -18,9 +18,28 @@ A LSTM Korean sentence classifier that can classify a sentence into six diffrent
 | Dense with 0.5 softmax | (None, 6) | 774 |
 
 Trainable params: 3,628,550
+
 Non-trainable params: 0
 
 Train on GTX1060 (6gb) with i7-7700HQ for 6hrs.
+
+## Result ##
+
+> With 1000 new samples
+
+| Category| value |
+| ------------- | ------------- |
+| Validation loss |2.2124|
+|Validation accuracy|0.6842|
+|computer|80.124 %|
+|consultation accuract|66.467 %|
+|small talk|43.429 %|
+|gaming| 71.069%|
+|subculture|75.000%|
+|politics|73.684%|
+
+Total : 68.000%
+
 
 ## Data ##
 The final model has been trained with total 523800 sentences are evenly collected from diffrent categories from [dogdrip.net](https://www.dogdrip.net/)
