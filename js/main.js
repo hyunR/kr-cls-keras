@@ -30,7 +30,7 @@ function LoadModel() {
     dict = json;
   });
   model = new KerasJS.Model({
-    filepath: 'model.bin',
+    filepath: 'model2.bin',
     gpu: false
   });
 
