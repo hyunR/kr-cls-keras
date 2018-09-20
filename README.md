@@ -4,6 +4,7 @@
 ----------
 
 A LSTM Korean sentence classifier that can classify a given sentence into six diffrent categories.
+
 Created with Keras and the demo is made with keras.js !
 
 ["You can try it here !"](https://hyunr.github.io/kr-cls-keras/ "https://hyunr.github.io/kr-cls-keras/")
