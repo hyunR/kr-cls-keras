@@ -5,3 +5,9 @@ html {
   position: relative;
   min-height: 100%;
 }
+#myChart {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
