@@ -30,7 +30,7 @@ function LoadModel() {
     dict = json;
   });
   model = new KerasJS.Model({
-    filepath: 'All_in_one_vchar_with_epochs_50.bin',
+    filepath: 'model.bin',
     gpu: false
   });
 
