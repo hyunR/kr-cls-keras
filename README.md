@@ -21,7 +21,7 @@ Trainable params: 3,628,550
 
 Non-trainable params: 0
 
-Train on GTX1060 (6gb) with i7-7700HQ for 6hrs.
+Trained on GTX1060 (6gb) with i7-7700HQ for 6hrs.
 
 ## Result ##
 
