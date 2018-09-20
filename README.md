@@ -3,10 +3,24 @@
 
 ----------
 
-A LSTM Korean sentence classifier that can classify a sentence into six diffrent categories.()
+A LSTM Korean sentence classifier that can classify a sentence into six diffrent categories.
 
 ["You can try it here !"](https://hyunr.github.io/kr-cls-keras/ "https://hyunr.github.io/kr-cls-keras/")
+
 ## Model Structure ##
+| Layer| Output Shape | Param # |
+| ------------- | ------------- | ------------- |
+| Embedding  | (None, 83, 64)  | 3200000 |
+| Bidirentional LSTM  | (None, 83, 256)  | 197632|
+| LSTM | (None, 128) | 197120 |
+| Dense with 0.5 droup out | (None, 128) | 16512 |
+| Dense with 0.5 droup out | (None, 128) | 16512 |
+| Dense with 0.5 softmax | (None, 6) | 774 |
+
+Trainable params: 3,628,550
+Non-trainable params: 0
+
+Train on GTX1060 (6gb) with i7-7700HQ for 6hrs.
 
 ## Data ##
 The final model has been trained with total 523800 sentences are evenly collected from diffrent categories from [dogdrip.net](https://www.dogdrip.net/)
