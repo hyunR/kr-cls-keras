@@ -86,8 +86,8 @@ function evaluation() {
       "덕판 : " + (outputData.output[4] * 100).toFixed(2) + '%' + "<br>" +
       "정사판 : " + (outputData.output[5] * 100).toFixed(2) + '%' + "<br>"
     );
-    var resultData = [(outputData.output[0] * 100), (outputData.output[1] * 100), (outputData.output[2] * 100),
-      (outputData.output[3] * 100), (outputData.output[4] * 100), (outputData.output[5] * 100)
+    var resultData = [(outputData.output[0] * 100).toFixed(4), (outputData.output[1] * 100).toFixed(4), (outputData.output[2] * 100).toFixed(4),
+      (outputData.output[3] * 100).toFixed(4), (outputData.output[4] * 100).toFixed(4), (outputData.output[5] * 100).toFixed(4)
     ]
     if (typeof(myChart) == "object") {
       myChart.destroy();
