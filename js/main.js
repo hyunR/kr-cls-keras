@@ -79,12 +79,12 @@ function evaluation() {
       $("#messageType2").html("<div class=\"alert alert-danger\"><h5> ! 씹뜨억 경고 ! </h5></div>");
     }
     $("#result").html(
-      "컴판 : " + precise(outputData.output[0] * 100) + '%' + "<br>" +
-      "고민판 : " + precise(outputData.output[1] * 100) + '%' + "<br>" +
-      "익게 : " + precise(outputData.output[2] * 100) + '%' + "<br>" +
-      "게임판 : " + precise(outputData.output[3] * 100) + '%' + "<br>" +
-      "덕판 : " + precise(outputData.output[4] * 100) + '%' + "<br>" +
-      "정사판 : " + precise(outputData.output[5] * 100) + '%' + "<br>"
+      "컴판 : " + (outputData.output[0] * 100).toFixed(2) + '%' + "<br>" +
+      "고민판 : " + (outputData.output[1] * 100).toFixed(2) + '%' + "<br>" +
+      "익게 : " + (outputData.output[2] * 100).toFixed(2) + '%' + "<br>" +
+      "게임판 : " + (outputData.output[3] * 100).toFixed(2) + '%' + "<br>" +
+      "덕판 : " + (outputData.output[4] * 100).toFixed(2) + '%' + "<br>" +
+      "정사판 : " + (outputData.output[5] * 100).toFixed(2) + '%' + "<br>"
     );
     var resultData = [(outputData.output[0] * 100), (outputData.output[1] * 100), (outputData.output[2] * 100),
       (outputData.output[3] * 100), (outputData.output[4] * 100), (outputData.output[5] * 100)
