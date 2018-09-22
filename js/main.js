@@ -3,6 +3,8 @@ var dict = {};
 var model;
 var myChart;
 
+
+
 function TextToIndexVector(text, seqlen) {
   var wordVec = new Array();
   text = text.toLowerCase();

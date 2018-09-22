@@ -94,5 +94,16 @@
   </main>
 
 </body>
+<script type="text/javascript">
+$(function() {
+  $("#messageText").keypress(function(e) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 13) {
+      $("#detectBtn").trigger('click');
+      return true;
+    }
+  });
+});
+</script>
 
 </html>
