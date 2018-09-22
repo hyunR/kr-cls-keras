@@ -30,21 +30,65 @@
 </style>
 
 <body onload="LoadModel()">
+  <div id="navbar">
+    <div id="currentPage">
+      <a href="index.html">게시판 판독기</a>
+    </div>
+    <div id="driplink">
+       <a href="drip.html">개드립 판독기</a>
+    </div>
+  </div>
  <main role="main" class="container">
-    <h1 class="mt-5">게시판 판독기</h1>
+
     <p>
       <p id="messageType"></p>
       <p id="messageType2"></p>
     </p>
     <form>
       <div class="form-group">
-        <label for="messageText">글을 입력해 주세요 :</label>
+        <label for="messageText" id="instruction">글을 입력해 주세요 :</label>
         <textarea class="form-control" id="messageText" rows="2" oninput="checkInput()" disabled></textarea>
 		    <button type="button" id="detectBtn" class="btn btn-primary btn-block" onClick="evaluation()">확인</button>
 
       </div>
       <canvas id="myChart" width="400" height="400" ></canvas>
       <p id="result" class="text-muted"></p>
+
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">확률</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">컴판</th>
+      <td id="computer"></td>
+    </tr>
+    <tr>
+      <th scope="row">고민판</th>
+      <td id="consol"></td>
+    </tr>
+    <tr>
+      <th scope="row">익게</th>
+      <td id="free"></td>
+    </tr>
+    <tr>
+      <th scope="row">게임판</th>
+      <td id="game"></td>
+    </tr>
+    <tr>
+      <th scope="row">덕판</th>
+      <td id="otaku"></td>
+    </tr>
+    <tr>
+      <th scope="row">정사판</th>
+      <td id="politics"></td>
+    </tr>
+  </tbody>
+</table>
+
 
     </form>
   </main>

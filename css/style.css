@@ -9,5 +9,32 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
-
-
+#navbar {
+  padding-top: 5px;
+  padding-left: 10px;
+  height: 50px;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  background-color: #2e4361;
+  display: flex;
+  text-align: center;
+}
+#currentPage {
+  font-size: 25px;
+}
+#instruction {
+  font-size: 16px;
+  color: #555b61;
+}
+#navbar a{
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+#driplink {
+  padding-left: 20px;
+}
+#driplink a {
+  font-size: 13px;
+}

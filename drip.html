@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>개드립 판독기</title>
+  <link rel="icon"  href="./icon.png">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script src="js/drip.js"></script>
+  <script src="js/keras.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+  body {
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+</style>
+
+<body onload="LoadModel()">
+  <div id="navbar">
+    <div id="currentPage">
+      <a href="drip.html">개드립 판독기</a>
+
+    </div>
+    <div id="driplink">
+       <a href="index.html">게시판 판독기</a>
+
+    </div>
+  </div>
+ <main role="main" class="container">
+
+    <p>
+      <p id="messageType"></p>
+      <p id="messageType2"></p>
+    </p>
+    <form>
+      <div class="form-group">
+        <label for="messageText" id="instruction">글을 입력해 주세요 :</label>
+        <textarea class="form-control" id="messageText" rows="2" oninput="checkInput()" disabled></textarea>
+		    <button type="button" id="detectBtn" class="btn btn-primary btn-block" onClick="evaluation()">확인</button>
+
+      </div>
+      <canvas id="myChart" width="400" height="400" ></canvas>
+      <p id="result" class="text-muted"></p>
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">확률</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">붐베</th>
+      <td id="boom">입력값이</td>
+
+    </tr>
+    <tr>
+      <th scope="row">개드립</th>
+      <td id="drip">없습니다</td>
+    </tr>
+  </tbody>
+</table>
+
+    </form>
+  </main>
+
+</body>
+
+</html>

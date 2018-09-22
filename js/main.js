@@ -30,7 +30,7 @@ function LoadModel() {
     dict = json;
   });
   model = new KerasJS.Model({
-    filepath: 'model2.bin',
+    filepath: './models/model2.bin',
     gpu: false
   });
 
@@ -78,14 +78,23 @@ function evaluation() {
     if (outputData.output[4] > 0.95) {
       $("#messageType2").html("<div class=\"alert alert-danger\"><h5> ! 씹뜨억 경고 ! </h5></div>");
     }
-    $("#result").html(
-      "컴판 : " + (outputData.output[0] * 100).toFixed(2) + '%' + "<br>" +
-      "고민판 : " + (outputData.output[1] * 100).toFixed(2) + '%' + "<br>" +
-      "익게 : " + (outputData.output[2] * 100).toFixed(2) + '%' + "<br>" +
-      "게임판 : " + (outputData.output[3] * 100).toFixed(2) + '%' + "<br>" +
-      "덕판 : " + (outputData.output[4] * 100).toFixed(2) + '%' + "<br>" +
-      "정사판 : " + (outputData.output[5] * 100).toFixed(2) + '%' + "<br>"
-    );
+    // $("#result").html(
+    //   "컴판 : " + (outputData.output[0] * 100).toFixed(2) + '%' + "<br>" +
+    //   "고민판 : " + (outputData.output[1] * 100).toFixed(2) + '%' + "<br>" +
+    //   "익게 : " + (outputData.output[2] * 100).toFixed(2) + '%' + "<br>" +
+    //   "게임판 : " + (outputData.output[3] * 100).toFixed(2) + '%' + "<br>" +
+    //   "덕판 : " + (outputData.output[4] * 100).toFixed(2) + '%' + "<br>" +
+    //   "정사판 : " + (outputData.output[5] * 100).toFixed(2) + '%' + "<br>"
+    // );
+
+    $("#computer").html((outputData.output[0] * 100).toFixed(2) + '%');
+    $("#consol").html((outputData.output[1] * 100).toFixed(2) + '%');
+    $("#free").html((outputData.output[2] * 100).toFixed(2) + '%');
+    $("#game").html((outputData.output[3] * 100).toFixed(2) + '%');
+    $("#otaku").html((outputData.output[4] * 100).toFixed(2) + '%');
+    $("#politics").html((outputData.output[5] * 100).toFixed(2) + '%');
+
+
     var resultData = [(outputData.output[0] * 100).toFixed(4), (outputData.output[1] * 100).toFixed(4), (outputData.output[2] * 100).toFixed(4),
       (outputData.output[3] * 100).toFixed(4), (outputData.output[4] * 100).toFixed(4), (outputData.output[5] * 100).toFixed(4)
     ]
